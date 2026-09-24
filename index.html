@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>E-Commerce Product Entry</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="header">
+        <div>
+            <h1>E-Commerce Product Entry</h1>
+            <p>Add and manage your products easily</p>
+        </div>
+    </header>
+
+
+    <!-- Main Container -->
+
+    <main class="main-container">
+
+        <!-- Product Form -->
+
+        <section class="form-section">
+
+            <div class="section-title">
+                <h2>Add New Product</h2>
+                <p>Enter product details below</p>
+            </div>
+
+
+            <form id="productForm">
+
+                <!-- Product Name -->
+
+                <div class="form-group">
+
+                    <label for="productName">
+                        Product Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="productName"
+                        placeholder="Enter product name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Price -->
+
+                <div class="form-group">
+
+                    <label for="price">
+                        Price
+                    </label>
+
+                    <input
+                        type="number"
+                        id="price"
+                        placeholder="Enter product price"
+                        min="0"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Description -->
+
+                <div class="form-group">
+
+                    <label for="description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        placeholder="Enter product description"
+                        rows="4"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Image URL -->
+
+                <div class="form-group">
+
+                    <label for="image">
+                        Product Image URL
+                    </label>
+
+                    <input
+                        type="url"
+                        id="image"
+                        placeholder="https://example.com/product.jpg"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Category -->
+
+                <div class="form-group">
+
+                    <label for="category">
+                        Category
+                    </label>
+
+                    <select id="category" required>
+
+                        <option value="">
+                            Select Category
+                        </option>
+
+                        <option value="Electronics">
+                            Electronics
+                        </option>
+
+                        <option value="Clothing">
+                            Clothing
+                        </option>
+
+                        <option value="Furniture">
+                            Furniture
+                        </option>
+
+                        <option value="Beauty">
+                            Beauty
+                        </option>
+
+                        <option value="Sports">
+                            Sports
+                        </option>
+
+                        <option value="Books">
+                            Books
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Rating -->
+
+                <div class="form-group">
+
+                    <label for="rating">
+                        Rating
+                    </label>
+
+                    <select id="rating" required>
+
+                        <option value="">
+                            Select Rating
+                        </option>
+
+                        <option value="1">
+                            ⭐ 1 / 5
+                        </option>
+
+                        <option value="2">
+                            ⭐⭐ 2 / 5
+                        </option>
+
+                        <option value="3">
+                            ⭐⭐⭐ 3 / 5
+                        </option>
+
+                        <option value="4">
+                            ⭐⭐⭐⭐ 4 / 5
+                        </option>
+
+                        <option value="5">
+                            ⭐⭐⭐⭐⭐ 5 / 5
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Warranty -->
+
+                <div class="form-group">
+
+                    <label for="warranty">
+                        Warranty Period
+                    </label>
+
+                    <select id="warranty" required>
+
+                        <option value="">
+                            Select Warranty
+                        </option>
+
+                        <option value="No Warranty">
+                            No Warranty
+                        </option>
+
+                        <option value="6 Months">
+                            6 Months
+                        </option>
+
+                        <option value="1 Year">
+                            1 Year
+                        </option>
+
+                        <option value="2 Years">
+                            2 Years
+                        </option>
+
+                        <option value="3 Years">
+                            3 Years
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Company -->
+
+                <div class="form-group">
+
+                    <label for="company">
+                        Company Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="company"
+                        placeholder="Enter company name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Return Policy -->
+
+                <div class="form-group">
+
+                    <label for="returnPolicy">
+                        Return Policy
+                    </label>
+
+                    <select id="returnPolicy" required>
+
+                        <option value="">
+                            Select Return Policy
+                        </option>
+
+                        <option value="7 Days Return">
+                            7 Days Return
+                        </option>
+
+                        <option value="10 Days Return">
+                            10 Days Return
+                        </option>
+
+                        <option value="15 Days Return">
+                            15 Days Return
+                        </option>
+
+                        <option value="30 Days Return">
+                            30 Days Return
+                        </option>
+
+                        <option value="No Return">
+                            No Return
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Submit -->
+
+                <button type="submit" id="submitBtn">
+                    Add Product
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Product Display -->
+
+        <section class="products-section">
+
+            <div class="products-header">
+
+                <div>
+                    <h2>Product Preview</h2>
+                    <p>Your added products will appear here</p>
+                </div>
+
+                <span id="productCount">
+                    0 Products
+                </span>
+
+            </div>
+
+
+            <div id="productContainer" class="product-container">
+
+                <div class="empty-message">
+
+                    <div class="empty-icon">
+                        🛍️
+                    </div>
+
+                    <h3>No Products Added</h3>
+
+                    <p>
+                        Fill the form to add your first product.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
